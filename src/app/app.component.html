@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Product Management</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+  <style>
+    /* Styles pour la barre latérale */
+    .sidebar {
+      height: 100vh;
+      position: fixed;
+      padding-top: 20px;
+      width: 200px;
+      background-color: #343a40; /* Couleur de fond de la barre latérale */
+    }
+
+    /* Styles pour la zone de contenu */
+    .content {
+      margin-left: 220px; /* Espace pour la barre latérale */
+      padding: 20px; /* Espacement interne */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark w-100">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Product Management</a>
+    <div class="navbar-nav ms-auto">
+      <div class="dropdown">
+        <button class="btn btn-secondary bg-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+          [USERNAME]
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+          <li><a class="dropdown-item" href="#">LOGIN</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">LOGOUT</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">PROFIL</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <h5 class="text-white text-center">Navigation</h5>
+
+  <!-- Home Section -->
+  <div class="mb-2">
+    <a class="btn btn-secondary w-100" href="products_list">HOME</a> <!-- Redirige vers products-list -->
+  </div>
+
+  <!-- Order Section -->
+  <div class="dropdown">
+    <button class="btn btn-secondary bg-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+      ORDER
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+      <li><a class="dropdown-item" routerLink="add_products">ADD</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" routerLink="products_list">LIST</a></li>
+    </ul>
+  </div>
+
+  <!-- Product Section -->
+  <div class="dropdown">
+    <button class="btn btn-secondary bg-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      PRODUCT
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" routerLink="add_products">ADD</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" routerLink="products_list">LIST</a></li>
+    </ul>
+  </div>
+
+  <!-- Customer Section -->
+  <div class="dropdown">
+    <button class="btn btn-secondary bg-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
+      CUSTOMER
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
+      <li><a class="dropdown-item" routerLink="add_products">ADD</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" routerLink="products_list">LIST</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Content Area -->
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
